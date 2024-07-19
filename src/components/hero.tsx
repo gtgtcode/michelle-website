@@ -1,3 +1,4 @@
+import { Button } from "antd";
 import localFont from "next/font/local";
 
 const archivo = localFont({
@@ -22,7 +23,7 @@ export default function Hero() {
       <div className="absolute w-[100%] h-[100%] bg-black top-0 opacity-70"></div>
       <div
         className={
-          "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 "
+          "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center"
         }
       >
         <span
@@ -31,10 +32,24 @@ export default function Hero() {
           GSR{" "}
         </span>
         <span
-          className={`${archivo.className} text-xl md:text-[30px] text-white`}
+          className={`${archivo.className} text-lg md:text-[30px] text-white`}
         >
           welcomes you!
         </span>
+        <br />
+        <br />
+        <span
+          className={`${archivo.className} text-md md:text-[20px] text-white`}
+        >
+          GSR is here for your needs. See what we can do for you.
+        </span>
+        <br />
+        <br />
+        <a href="/services">
+          <Button type="primary" className="scale-[1.2]" danger>
+            Our Services
+          </Button>
+        </a>
       </div>
     </section>
   );

@@ -7,17 +7,19 @@ export default function Navbar() {
   return (
     <div>
       <nav className="container mx-auto py-4 px-12 shadow-b shadow-lg relative">
-        <img
-          src="/logo.png"
-          alt="Company Logo"
-          className="md:h-[80px] h-[50px] inline"
-        />
+        <a href="/">
+          <img
+            src="/logo.png"
+            alt="Company Logo"
+            className="md:h-[80px] h-[50px] inline"
+          />
+        </a>
         <div className="hidden md:block absolute right-12 top-1/2 -translate-y-1/2 float-right">
           <ul>
-            <li className="inline transition-all hover:font-bold px-2">
+            <li className="inline transition-all hover:font-bold hover:text-blue-900 px-2">
               <a href="/about">About Us</a>
             </li>
-            <li className="inline transition-all hover:font-bold px-2 pr-4">
+            <li className="inline transition-all hover:font-bold hover:text-blue-900 px-2 pr-4">
               <a href="/services">Our Services</a>
             </li>
             <a href="/contact">
