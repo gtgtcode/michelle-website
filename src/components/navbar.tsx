@@ -11,7 +11,7 @@ export default function Navbar() {
           <img
             src="/logo.png"
             alt="Company Logo"
-            className="md:h-[80px] h-[50px] inline"
+            className="md:h-[80px] h-[65px] inline"
           />
         </a>
         <div className="hidden md:block absolute right-12 top-1/2 -translate-y-1/2 float-right">

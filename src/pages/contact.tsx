@@ -1,7 +1,27 @@
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
+import { useState } from "react";
 
 export default function Contact() {
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+
+    // Construct mailto link with populated data
+    const mailtoLink = `mailto:gsrgeneralservice@gmail.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(message)}`;
+
+    // Open default mail app
+    window.location.href = mailtoLink;
+
+    // Clear form fields after submission (optional)
+    setSubject("");
+    setMessage("");
+  };
+
   return (
     <main>
       <Navbar />
@@ -31,19 +51,22 @@ export default function Contact() {
           </div>
         </section>
 
-        {/* Contact Form Section */}
         <section className="bg-gray-100 p-6 rounded-lg shadow-md mb-12">
           <h2 className="text-xl font-semibold mb-4">Send Us a Message</h2>
-          <form className="flex flex-col space-y-4">
+          <form className="flex flex-col space-y-4" onSubmit={handleSubmit}>
             <input
               type="text"
               placeholder="Subject"
               className="p-2 border border-gray-300 rounded"
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
               required
             />
             <textarea
               placeholder="Your Message"
               className="p-2 border border-gray-300 rounded h-32"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
               required
             ></textarea>
             <button
