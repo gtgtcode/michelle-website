@@ -1,5 +1,6 @@
-import { Button, Divider } from "antd";
+import { Button } from "@mui/material";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Navbar() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
@@ -7,32 +8,31 @@ export default function Navbar() {
   return (
     <div>
       <nav className="container mx-auto py-4 px-12 shadow-b shadow-lg relative">
-        <a href="/">
+        <Link href="/">
           <img
             src="/logo.png"
             alt="Company Logo"
             className="md:h-[80px] h-[65px] inline"
           />
-        </a>
+        </Link>
         <div className="hidden md:block absolute right-12 top-1/2 -translate-y-1/2 float-right">
           <ul>
             <li className="inline transition-all hover:font-bold hover:text-blue-900 px-2">
-              <a href="/about">About Us</a>
+              <Link href="/about">About Us</Link>
             </li>
             <li className="inline transition-all hover:font-bold hover:text-blue-900 px-2 pr-4">
-              <a href="/services">Our Services</a>
+              <Link href="/services">Our Services</Link>
             </li>
-            <a href="/contact">
-              <Button type="primary" danger>
-                <p className="font-bold">Contact Us</p>
-              </Button>
-            </a>
+
+            <Button variant="contained" href="/contact" color="error">
+              <p className="font-bold">Contact Us</p>
+            </Button>
           </ul>
         </div>
         <Button
           className="md:hidden absolute right-12 top-1/2 -translate-y-1/2 scale-150"
-          type="text"
-          shape="circle"
+          variant="text"
+          color="error"
           onClick={() => setMobileNavOpen(!mobileNavOpen)}
         >
           <i className="fa fa-bars" aria-hidden="true"></i>
@@ -42,19 +42,19 @@ export default function Navbar() {
         <div className="md:hidden text-center py-4 shadow-b shadow-lg">
           <ul>
             <li className="py-2">
-              <a href="/about">About Us</a>
+              <Link href="/about">About Us</Link>
             </li>
             <div className="border-b border w-1/2 mx-auto"></div>
             <li className="py-2">
-              <a href="/services">Our Services</a>
+              <Link href="/services">Our Services</Link>
             </li>
             <div className="border-b border w-1/2 mx-auto"></div>
             <li className="py-2">
-              <a href="/contact">
-                <Button type="primary" className="bg-red-800" danger>
+              <Link href="/contact">
+                <Button variant="contained" href="/contact" color="error">
                   Contact Us
                 </Button>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

@@ -1,4 +1,5 @@
-import { Button } from "antd";
+import { Button } from "@mui/material";
+import Link from "next/link";
 
 export default function ServiceTemplate(props: any) {
   return (
@@ -24,11 +25,11 @@ export default function ServiceTemplate(props: any) {
             }
           />
           <p className="mb-8">{props.content}</p>
-          <a href="/contact">
-            <Button type="primary" danger>
+          <Link href="/contact">
+            <Button variant="contained" color="error">
               <p className="font-bold">Contact Us</p>
             </Button>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

@@ -1,5 +1,6 @@
-import { Button } from "antd";
+import { Button } from "@mui/material";
 import localFont from "next/font/local";
+import Link from "next/link";
 
 const archivo = localFont({
   src: "../../public/fonts/ArchivoBlack-Regular.otf",
@@ -45,11 +46,11 @@ export default function Hero() {
         </span>
         <br />
         <br />
-        <a href="/services">
-          <Button type="primary" className="scale-[1.2]" danger>
+        <Link href="/services">
+          <Button variant="contained" className="scale-[1.2]" color="error">
             Our Services
           </Button>
-        </a>
+        </Link>
       </div>
     </section>
   );

@@ -1,7 +1,8 @@
 import Footer from "@/components/footer";
+import List from "@/components/list";
 import Navbar from "@/components/navbar";
 import ServiceTemplate from "@/components/service-template";
-import { Button } from "antd";
+import { Button, Divider } from "@mui/material";
 import localFont from "next/font/local";
 
 const archivo = localFont({
@@ -26,7 +27,7 @@ export default function About() {
           with a highly-experienced team.
         </p>
         <a href="/contact">
-          <Button type="primary">Contact Us</Button>
+          <Button variant="contained">Contact Us</Button>
         </a>
       </section>
       <div className="my-12">
@@ -41,7 +42,11 @@ export default function About() {
           }
         />
       </div>
+      <div className="container mx-auto mb-12">
+        <Divider />
+      </div>
 
+      <List />
       <Footer />
     </main>
   );
