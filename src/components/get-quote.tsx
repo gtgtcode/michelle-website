@@ -13,7 +13,7 @@ export default function GetQuote() {
         "bg-red-700 text-white py-12 px-2 text-center " + archivo.className
       }
     >
-      <h1 className="text-2xl">Need Link quote on your next project?</h1>
+      <h1 className="text-2xl">Need a quote on your next project?</h1>
       <p className="mt-4 mb-8">Send us an email or call for further details.</p>
       <Link href="/contact">
         <Button variant="contained" color="error">

@@ -7,7 +7,7 @@ export default function Navbar() {
 
   return (
     <div>
-      <nav className="container mx-auto py-4 px-12 shadow-b shadow-lg relative">
+      <nav className="md:container mx-auto py-4 px-4 shadow-b shadow-lg relative">
         <Link href="/">
           <img
             src="/logo.png"
@@ -30,7 +30,7 @@ export default function Navbar() {
           </ul>
         </div>
         <Button
-          className="md:hidden absolute right-12 top-1/2 -translate-y-1/2 scale-150"
+          className="md:hidden absolute right-4 top-1/2 -translate-y-1/2 scale-150"
           variant="text"
           color="error"
           onClick={() => setMobileNavOpen(!mobileNavOpen)}
