@@ -15,7 +15,7 @@ export default function Home() {
         <div className="flex flex-wrap">
           {/* Text Content Column */}
           <div className="w-full mb-12">
-            <h2 className="text-3xl font-bold mb-6 text-center">
+            <h2 className="text-xl font-bold mb-6 text-center">
               Why Choose GSR?
             </h2>
             <p className="mb-8 text-lg">
