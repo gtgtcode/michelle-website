@@ -1,4 +1,5 @@
 import Footer from "@/components/footer";
+import List from "@/components/list";
 import Navbar from "@/components/navbar";
 import ServiceTemplate from "@/components/service-template";
 
@@ -34,7 +35,7 @@ export default function Services() {
           "GSR offers top-notch drywall installation services for both residential and commercial projects in Virginia. Our experienced team ensures precise fitting and finishing, creating a smooth canvas for your interior design. Trust us to enhance your space with quality craftsmanship that stands the test of time!"
         }
       />
-
+      <List />
       <Footer />
     </main>
   );
