@@ -32,13 +32,16 @@ export default function Contact() {
         </h1>
         <section className="mb-12">
           <div className="inline">
-            <a href="tel:+1804664-7817" className="hover:text-blue-900">
+            <a href="tel:+18046647817" className="hover:text-blue-900">
               <i className="fa-solid fa-phone scale-[1.5] inline"></i>
-              <p className="inline pl-2 font-bold">(804) 664-7817</p>
+              <p className="inline px-2 font-bold">(804) 664-7817</p>
+            </a>
+            {" | "}
+            <a href="tel:+18045167859" className="hover:text-blue-900">
+              <p className="inline pl-2 font-bold">(804) 516-7859 </p>
             </a>
           </div>
-          <i className="fa-solid fa-grip-lines-vertical mx-4 scale-[1.5] inline"></i>
-          <div className="inline">
+          <div className="inline md:pl-4">
             <a
               href="mailto:gsrgeneralservice@gmail.com"
               className="hover:text-blue-900"
